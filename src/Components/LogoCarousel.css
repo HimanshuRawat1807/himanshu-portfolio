@@ -1,0 +1,24 @@
+.brand-carousel {
+  padding: 20px;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.brand-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.brand-slide img {
+  max-width: 100px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.brand-slide img:hover {
+  opacity: 1;
+}
