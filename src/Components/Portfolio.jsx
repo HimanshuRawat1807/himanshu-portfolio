@@ -460,12 +460,15 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-import Workone from "../assets/EcommerceWebsite.png";
+import Workone from "../assets/BusinessWebsite.png";
 import Worktwo from "../assets/BusinessWebsite.png";
 import Workthree from "../assets/NewsWebsite.png";
+import { ArrowRight } from 'lucide-react';
 
 const projects = [
-  {
+
+  {   
+    shorDescription: "A online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design.",
     title: "Portfolio Website",
     description: "A personal portfolio site showcasing my work and skills.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],
@@ -473,6 +476,7 @@ const projects = [
     link: "#",
   },
   {
+    shorDescription: "A online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design.",
     title: "E-commerce App",
     description: "An online shopping platform with product pages and cart.",
     tech: ["Next.js", "Stripe", "MongoDB"],
@@ -480,6 +484,7 @@ const projects = [
     link: "#",
   },
   {
+    shorDescription: "A online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design.",
     title: "Admin Dashboard",
     description: "An internal dashboard for managing data and users.",
     tech: ["Vue", "Tailwind CSS", "Firebase"],
@@ -528,31 +533,38 @@ export default function Portfolio() {
   }, [activeIndex]);
 
   return (
+
     <div className="bg-[#0A0A0A] text-black">
       {/* Desktop layout */}
-      <div className="hidden md:flex max-w-6xl mx-auto">
+      <div className="hidden max-w-7xl lg:flex  mx-auto">
         {/* Left: images */}
-        <div className="w-1/2">
+        <div className=" w-2/3  ">
           {projects.map((proj, i) => (
             <section
               key={i}
               data-index={i}
               ref={(el) => (sectionRefs.current[i] = el)}
-              className={`h-screen flex items-center justify-center border-b border-gray-200 ${
+              className={`group overflow-hidden  flex flex-col items-center justify-center border-10 mb-20 mx-15 relative cursor-pointer rounded-2xl border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl  lg:rounded-3xl lg:p-2 ${
                 activeIndex === i ? "is-visible" : ""
               }`}
             >
+              <div className="hidden lg:flex justify-center items-center px-12 py-8 ">
+                <h3 className="text-white">
+                  {proj.shorDescription}
+                </h3>
+                <ArrowRight size={35} color="white"/>
+              </div>
               <img
                 src={proj.image}
                 alt={proj.title}
-                className="max-h-[80vh] object-contain rounded-xl shadow-2xl image"
-              />
+                className="w-full max-w-[85%] object-contain rounded-xl shadow-2xl  duration-500 group-hover:-rotate-5 group-hover:scale-105 mt-15 "
+              />  
             </section>
           ))}
         </div>
 
         {/* Right: sticky project details */}
-        <aside className="w-1/2 sticky top-0 h-screen flex items-center p-8 bg-[#0A0A0A] text-white">
+        <aside className="w-1/3 sticky top-50 h-screen flex  bg-[#0A0A0A] text-white">
           <div
             className={`max-w-xl transition-all duration-600 ease-out ${
               contentVisible
@@ -588,6 +600,39 @@ export default function Portfolio() {
             </a>
           </div>
         </aside>
+      </div>
+
+       {/* Tablet layout */}
+      <div className="hidden md:flex flex-wrap  mx-auto border  max-w-6xl lg:hidden">
+        {projects.map((proj, i) => (
+          <div key={i} className="  max-w-1/2 px-4 py-4 ">
+            <img
+              src={proj.image}
+              alt={proj.title}
+              className="w-full rounded-xl shadow-lg"
+            />
+            <h2 className="text-2xl font-bold">{proj.title}</h2>
+            <p className="text-gray-700">{proj.description}</p>
+            <div className="flex flex-wrap gap-2">
+              {proj.tech.map((t, idx) => (
+                <span
+                  key={idx}
+                  className="bg-gray-200 text-black px-3 py-1 rounded text-sm"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+            <a
+              href={proj.link}
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project →
+            </a>
+          </div>
+        ))}
       </div>
 
       {/* Mobile layout */}

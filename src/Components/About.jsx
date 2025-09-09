@@ -1,37 +1,67 @@
-import React from 'react';
+import React from "react";
+import MyImg from "../assets/HimanshuRawat.jpg";
+import { Linkedin, Github, Twitter, ArrowUp } from "lucide-react";
 
 const About = () => {
   return (
-    <section className="w-full px-6 py-12 bg-[#0A0A0A] md:px-12 lg:px-24 xl:px-32" id="about">
-      <div className="max-w-6xl mx-auto">
-        {/* <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">
-          About Me
-        </h2> */}
-        <h2 className="text-white  font-bold">
-          About
-        </h2>
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          {/* <div className="w-full md:w-1/2">
+    <section className="min-h-screen  bg-black " id="about">
+      <div className="bg-blue flex flex-wrap   max-w-7xl m-auto px-5 ">
+        {/* content side */}
+        <div className="text-white w-1/1 lg:w-1/2 pe-10">
+          <h2 className="text-4xl font-bold mb-10">About Me</h2>
+
+          <p className="pt-4">
+            Hello! I’m Himanshu Rawat, a creative web developer passionate about crafting responsive, user-friendly, and visually captivating websites. From structuring layouts to adding interactive elements, I bring ideas to life using React, Tailwind CSS, and Bootstrap.
+          </p>
+
+          <p className="pt-4">I believe every website should not just function but tell a story, engage users, and create an experience worth remembering. Beyond coding, I’m constantly exploring new design trends and technologies to deliver fresh, modern solutions.</p>
+          
+          <p className="pt-4">I live by one principle: Great design is born from passion, and passion turns ideas into reality.</p>
+
+           <div className="flex items-center justify-start space-x-4 text-white mt-10">
             
-          </div> */}
-          <div className="w-full md:w-1/2 text-white text-base leading-relaxed">
-            <p className="mb-4">
-              Hello! I’m <span className="font-semibold text-indigo-600">Himanshu Rawat</span>, a passionate
-              and creative professional with a focus on building impactful digital experiences.
-            </p>
-            <p className="mb-4">
-              I specialize in <span className="font-medium">[Your Skills]</span> and have been working
-              in the industry for over <span className="font-medium">[X Years]</span>. I love turning complex
-              problems into simple, beautiful, and intuitive designs.
-            </p>
-            <p>
-              When I'm not coding or designing, I enjoy reading, exploring new tools, and contributing
-              to open-source communities.
-            </p>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noreferrer"
+              className="border-1 p-3 rounded-2xl  border-white/30  bg-transparent 
+             transition-all duration-500 ease-in-out 
+             hover:bg-white hover:text-gray-900 hover:scale-110 transform"
+            >
+              <Linkedin size={20} />
+            </a>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noreferrer"
+              className="border-1 p-3 rounded-2xl  border-white/30  bg-transparent 
+             transition-all duration-500 ease-in-out 
+             hover:bg-white hover:text-gray-900 hover:scale-110 transform"
+            >
+              <Github size={20} />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noreferrer"
+              className="border-1 p-3 rounded-2xl  border-white/30  bg-transparent 
+             transition-all duration-500 ease-in-out 
+             hover:bg-white hover:text-gray-900 hover:scale-110 transform"
+            >
+              <Twitter size={20} />
+            </a>
           </div>
-           <div className="w-full md:w-1/2">
-            
-          </div>
+
+        </div>
+
+        {/* Image side */}
+        <div className="text-white w-1/1 lg:w-1/2 mt-10 md:mt-10 lg:mt-0 flex justify-center items-center">
+
+
+        <div className="p-5 rounded-4xl">
+          <img src={MyImg} className="rounded-4xl" alt="" srcset="" />
+
+        </div>
         </div>
       </div>
     </section>

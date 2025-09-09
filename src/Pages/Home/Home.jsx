@@ -7,17 +7,20 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
 
+
 // import "./Home.css";
 import About from '../../Components/About';
 import Portfolio from '../../Components/Portfolio';
 import Service from '../../Components/Service';
 import Testimonials from '../../Components/Testimonial';
 import Contact from '../../Components/Contact';
-import Resume from '../../Components/Resume';
+import Experience from '../../Components/Experience';
 import Hero from '../../Components/Hero';
+import ToolsSection from '../../Components/ToolsSection';
+import PopUpForm from '../../Components/PopUpForm';
 
 
-const Home = () => {
+const Home = ({toggleModal}) => {
   return (
     <div id="home">
 
@@ -44,13 +47,15 @@ const Home = () => {
             </div>
         </section> */}
 
-        <Hero/>
-        {/* <About/> */}
+        <Hero toggleModal={toggleModal}/>
         <Portfolio/>
+        <ToolsSection/>
         <Service/>
+        <About/>
         <Testimonials/>
-        <Contact/>
-        <Resume/>
+        {/* <Contact/> */}
+    
+        <Experience/>
         
 
     </div>
