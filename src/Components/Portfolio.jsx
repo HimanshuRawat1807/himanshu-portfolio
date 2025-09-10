@@ -534,7 +534,12 @@ export default function Portfolio() {
 
   return (
 
-    <div className="bg-[#0A0A0A] text-black">
+    <div className="bg-[#0A0A0A] text-black py-25">
+
+        <div className="flex justify-center items-center">
+        <h2 className="text-gray-100 sm:3xl md:text-3xl lg:text-5xl font-extrabold uppercase mb-15">Recent Creations</h2>
+        </div>
+
       {/* Desktop layout */}
       <div className="hidden max-w-7xl lg:flex  mx-auto">
         {/* Left: images */}
@@ -572,10 +577,10 @@ export default function Portfolio() {
                 : "translate-y-6 opacity-0"
             }`}
           >
-            <h2 className="text-4xl font-bold mb-4">
+            <h3 className="text-gray-100 sm:3xl md:text-3xl lg:text-4xl font-bold uppercase mb-2">
               {projects[activeIndex].title}
-            </h2>
-            <p className="mb-4 text-lg text-gray-200">
+            </h3>
+            <p className="mb-4 text-lg text-gray-400">
               {projects[activeIndex].description}
             </p>
 

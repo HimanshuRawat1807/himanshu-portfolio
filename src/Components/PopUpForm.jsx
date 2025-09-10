@@ -8,23 +8,16 @@ const PopUpForm = ({isOpen,toggleModal}) => {
 //   };
 
   return (
-    // <div className="flex justify-center items-center h-screen bg-gray-900">
-    //   {/* Trigger Button */}
-    //   <button
-    //     onClick={toggleModal}
-    //     className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
-    //   >
-    //     Open Form
-    //   </button>
+  <>
 
-    <>
+ 
 
       
       {/* Modal Overlay */}
       {isOpen && (
           <div
           className="fixed inset-0 bg-transparent backdrop-blur-md bg-opacity-50 flex justify-center items-center z-50"
-        //   onClick={toggleModal}
+          onClick={toggleModal}
           >
           {/* Modal Content */}
           <div
@@ -81,9 +74,7 @@ const PopUpForm = ({isOpen,toggleModal}) => {
           </div>
         </div>
       )}
-</>
-
-    // </div>
+ </>
   );
 };
 

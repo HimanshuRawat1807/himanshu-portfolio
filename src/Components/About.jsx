@@ -4,11 +4,11 @@ import { Linkedin, Github, Twitter, ArrowUp } from "lucide-react";
 
 const About = () => {
   return (
-    <section className="min-h-screen  bg-black " id="about">
+    <section className="min-h-screen bg-[#0A0A0A]" id="about">
       <div className="bg-blue flex flex-wrap   max-w-7xl m-auto px-5 ">
         {/* content side */}
         <div className="text-white w-1/1 lg:w-1/2 pe-10">
-          <h2 className="text-4xl font-bold mb-10">About Me</h2>
+          <h2 className="text-gray-100 sm:3xl md:text-3xl lg:text-5xl font-extrabold uppercase mb-5">About Me</h2>
 
           <p className="pt-4">
             Hello! I’m Himanshu Rawat, a creative web developer passionate about crafting responsive, user-friendly, and visually captivating websites. From structuring layouts to adding interactive elements, I bring ideas to life using React, Tailwind CSS, and Bootstrap.

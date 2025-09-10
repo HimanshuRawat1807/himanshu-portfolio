@@ -55,9 +55,9 @@ const Footer = () => {
     //   </div>
     // </footer>
 
-    <footer className=" pt-30 md:pt-20 sm:pt-10 bg-black ">
+    <footer className=" pt-30 md:pt-20 sm:pt-10 bg-[#0A0A0A]">
       {/* <div className=" bg-blue w-full sm:w-11/12 md:w-10/12 lg:w-10/12 xl:w-12/12 2xl:10/12 mx-auto grid md:grid-cols-2 gap-12 items-start"> */}
-      <div className="bg-[#161616] rounded-2xl flex flex-wrap max-w-7xl m-auto px-5 justify-center items-center ">
+      <div className="bg-[#161616] rounded-2xl flex flex-wrap max-w-7xl m-auto px-5 justify-center items-center py-5">
         {/* Logo / Info */}
         <div className=" text-white w-full lg:w-1/3 md:w-1/3 sm:-1/1 flex justify-center lg:justify-start ">
           <ul className="text-sm space-y-1 flex gap-5">
@@ -123,7 +123,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-10 border border-gray-700 pt-4 text-sm text-center text-gray-500">
+      <div className="mt-10 pt-4 text-sm text-center text-gray-500 py-5">
         <p className="m-auto">
           © {new Date().getFullYear()} Himanshu Rawat. All rights reserved.
         </p>

@@ -82,9 +82,9 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="bg-[#000000] text-white py-16">
+    <section id="experience" className="bg-[#0A0A0A] text-white py-16">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-12">
+        <h2 className="text-gray-100 sm:3xl md:text-3xl lg:text-5xl font-extrabold uppercase mb-15 text-center">
           My <span className="">Experience</span>
         </h2>
 
