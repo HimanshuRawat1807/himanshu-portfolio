@@ -175,12 +175,12 @@ const Hero = ({toggleModal}) => {
     //   </div>
     // </section>
 
-    <section className="min-h-screen lg:pt-40 md:pt-20 sm:pt-10 bg-[#0A0A0A]  border border-white">
+    <section className="min-h-screen lg:pt-40 md:pt-20 sm:pt-10 bg-[#0A0A0A]">
       
-      <div className=" bg-blue flex flex-wrap justify-center items-center max-w-7xl m-auto px-5 border border-white ">
+      <div className=" bg-blue flex flex-wrap justify-center items-center max-w-7xl m-auto px-5  ">
         
         {/* left side*/}  
-      <div className="w-full lg:w-2/3 order-2 lg:order-1 text-center lg:text-start mb-5 border border-white">
+      <div className="w-full lg:w-2/3 order-2 lg:order-1 text-center lg:text-start mb-5 ">
 
            <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold text-white uppercase mb-10 ">
              Website  <br />
@@ -201,7 +201,7 @@ const Hero = ({toggleModal}) => {
           </div>
 
       {/* right side */}
-        <div className="w-full lg:w-1/3 order-1 lg:order-2   md:mb-10 flex justify-center max-w-full border border-white">
+        <div className="w-full lg:w-1/3 order-1 lg:order-2   md:mb-10 flex justify-center max-w-full border ">
             <div className="max-w-sm w-full bg-[#151515] rounded-3xl shadow-lg overflow-hidden text-center px-6 py-8 space-y-4">
               <div className="w-full">
               
